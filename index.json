@@ -1,0 +1,11 @@
+{
+  "versions": [
+    {
+      "file": "tr_v1.json",
+      "rulesVersion": 1,
+      "schemaVersion": 1,
+      "publishedAt": "2026-08-27",
+      "inspectionFeeYear": 2026
+    }
+  ]
+}
