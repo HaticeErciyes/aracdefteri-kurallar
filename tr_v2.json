@@ -1,0 +1,311 @@
+{
+  "rulesVersion": 2,
+  "schemaVersion": 1,
+  "country": "TR",
+  "locale": "tr_TR",
+  "publishedAt": "2026-09-01",
+  "disclaimer": "Bu tarihler yalnızca hatırlatma amaçlıdır ve resmi bilgi değildir. Kendi ruhsatınızdaki/poliçenizdeki tarih esastır; lütfen resmi kaynaktan doğrulayın.",
+  "provider": {
+    "inspectionBrandName": "TÜVTÜRK",
+    "inspectionBrandNote": "Sözleşme süresi dolduğunda muayene hizmeti marka adı değişebilir (ör. 2027 sonrası TURKA). Marka adı yalnızca bu dosyadan okunur."
+  },
+  "officialLinks": {
+    "inspectionAppointment": {
+      "label": "Muayene randevusu al",
+      "url": "https://www.tuvturk.com.tr/randevu"
+    },
+    "vehicleInquiry": {
+      "label": "e-Devlet \"Araçlarım\"",
+      "url": "https://www.turkiye.gov.tr/araclarim"
+    },
+    "trafficFineInquiry": {
+      "label": "Plakadaki ceza borcunu sorgula",
+      "url": "https://www.turkiye.gov.tr/emniyet-arac-plakasina-yazilan-ceza-sorgulama"
+    },
+    "mtvPayment": {
+      "label": "MTV sorgula ve öde",
+      "url": "https://www.turkiye.gov.tr/gib-intvrg-motorlu-tasitlar-vergisi-sorgulama-ve-kredi-karti-ile-odeme"
+    },
+    "insuranceInquiry": {
+      "label": "Trafik poliçeni sorgula",
+      "url": "https://www.turkiye.gov.tr/sbm-trafik-police-sorgulama"
+    },
+    "kaskoInquiry": {
+      "label": "Kasko poliçeni sorgula",
+      "url": "https://www.turkiye.gov.tr/sbm-kasko-police-sorgulama"
+    }
+  },
+  "inspection": {
+    "note": "Aşağıdaki periyotlar başlangıç değeridir; kullanıcının belgesindeki tarih her zaman önceliklidir.",
+    "periods": {
+      "otomobil": {
+        "label": "Hususi otomobil",
+        "firstDueAtAgeYears": 3,
+        "intervalYears": 2,
+        "confidence": "high",
+        "sourceNote": "İlk 3 yaşın sonunda, sonra 2 yılda bir. (2918 sayılı KTK md. 34 kapsamındaki periyotlar; 2026-08 taramasında birden çok kaynak aynı.)"
+      },
+      "motosiklet": {
+        "label": "Motosiklet",
+        "firstDueAtAgeYears": 3,
+        "intervalYears": 2,
+        "confidence": "medium",
+        "sourceNote": "İlk 3 yaşın sonunda, sonra 2 yılda bir. 2026-08 taramasında kaynaklar bu değerde birleşti; geçmişte 3 yıl diyen kaynaklar da vardı. Yine de ruhsatındaki tarihi gir."
+      },
+      "ticari": {
+        "label": "Ticari araç (taksi, kamyon, otobüs)",
+        "firstDueAtAgeYears": 1,
+        "intervalYears": 1,
+        "confidence": "high",
+        "sourceNote": "İlk 1 yaşın sonunda, sonra her yıl. Taksi, dolmuş, minibüs, otobüs, kamyon ve çekicileri kapsar."
+      },
+      "traktor": {
+        "label": "Traktör",
+        "firstDueAtAgeYears": 3,
+        "intervalYears": 3,
+        "confidence": "medium",
+        "sourceNote": "İlk 3 yaşın sonunda, sonra 3 yılda bir (lastik tekerlekli traktör)."
+      }
+    }
+  },
+  "inspectionFees": {
+    "year": 2026,
+    "note": "2026 yılı yaklaşık muayene ücretleridir (kuruş). Her yıl yeniden değerleme oranıyla değişir; kesin tutar için TÜVTÜRK ücret listesine bakın.",
+    "byVehicleType": {
+      "otomobil": 328800,
+      "motosiklet": 167400,
+      "ticari": 444600,
+      "traktor": 167400
+    },
+    "exhaustEmission": 46000,
+    "exhaustEmissionNote": "2026 yılı egzoz emisyon ölçüm ücreti (kuruş). Çevre, Şehircilik ve İklim Değişikliği Bakanlığı tarifesi; TÜVTÜRK muayene fiyat listesinde yer almaz, bu yüzden otomatik güncellenmez — yılda bir elle doğrulanmalıdır."
+  },
+  "vehicleFuelTypes": {
+    "note": "Araç tipine göre seçilebilecek yakıt tipleri. Motosiklet ve traktörde LPG seçeneği gösterilmez. Piyasa değişirse yalnızca bu liste güncellenir.",
+    "byVehicleType": {
+      "otomobil": [
+        "benzin",
+        "dizel",
+        "lpg",
+        "elektrik",
+        "hibrit"
+      ],
+      "motosiklet": [
+        "benzin",
+        "elektrik"
+      ],
+      "ticari": [
+        "benzin",
+        "dizel",
+        "lpg",
+        "elektrik",
+        "hibrit"
+      ],
+      "traktor": [
+        "dizel",
+        "benzin"
+      ]
+    }
+  },
+  "consumptionSanity": {
+    "note": "Makul tüketim aralıkları (birim başına 100 km). Bu aralığın dışında bir sonuç çıkarsa kullanıcıya \"kayıtta hata olabilir\" uyarısı gösterilir; kayıt yine de silinmez.",
+    "byFuelType": {
+      "benzin": {
+        "min": 3.0,
+        "max": 25.0
+      },
+      "dizel": {
+        "min": 2.5,
+        "max": 40.0
+      },
+      "lpg": {
+        "min": 4.0,
+        "max": 30.0
+      },
+      "hibrit": {
+        "min": 2.0,
+        "max": 20.0
+      },
+      "elektrik": {
+        "min": 8.0,
+        "max": 40.0
+      }
+    }
+  },
+  "exhaustEmission": {
+    "label": "Egzoz emisyon ölçümü",
+    "requiredBeforeInspection": true,
+    "note": "Muayeneden ayrı bir işlemdir ve muayeneden ÖNCE yaptırılması zorunludur. Geçerli egzoz ölçümü olmayan araç muayenede ağır kusurlu sayılır.",
+    "appliesToFuelTypes": [
+      "benzin",
+      "dizel",
+      "lpg"
+    ],
+    "suggestDaysBeforeInspection": 15,
+    "appliesToVehicleTypes": [
+      "otomobil",
+      "ticari"
+    ],
+    "periodsByVehicleType": {
+      "otomobil": {
+        "firstDueAtAgeYears": 3,
+        "intervalYears": 2
+      },
+      "ticari": {
+        "firstDueAtAgeYears": 1,
+        "intervalYears": 1
+      }
+    },
+    "sourceNote": "MADDE 6 (periyotlar) ve MADDE 7 (muaf araçlar): Egzoz Gazı Emisyonu Kontrolü Yönetmeliği, RG 11/03/2017-30004. https://resmigazete.gov.tr/eskiler/2017/03/20170311-12.htm Madde 7 uyarınca traktörler, motosiklet/mopetler, elektrikli ve hibrit elektrikli taşıtlar ölçüme TABİ DEĞİLDİR."
+  },
+  "mtv": {
+    "label": "Motorlu Taşıtlar Vergisi",
+    "installments": [
+      {
+        "id": "mtv1",
+        "label": "MTV 1. taksit",
+        "month": 1,
+        "day": 31
+      },
+      {
+        "id": "mtv2",
+        "label": "MTV 2. taksit",
+        "month": 7,
+        "day": 31
+      }
+    ],
+    "exemptVehicleTypes": [
+      "traktor"
+    ],
+    "note": "Ödeme son günü resmi tatile denk gelirse takip eden ilk iş günüdür; lütfen GİB'den doğrulayın."
+  },
+  "trafficInsurance": {
+    "label": "Zorunlu trafik sigortası",
+    "intervalYears": 1,
+    "requiredForInspection": true,
+    "note": "Geçerli zorunlu trafik sigortası olmayan araç muayeneye kabul edilmez."
+  },
+  "kasko": {
+    "label": "Kasko",
+    "intervalYears": 1,
+    "mandatory": false
+  },
+  "latePenalty": {
+    "label": "Muayene gecikme bedeli",
+    "monthlyRatePercent": 5,
+    "partialMonthCountsAsFull": true,
+    "note": "Muayene süresinin geçirildiği her ay için muayene ücretinin %5'i gecikme zammı alınır; ayın kesri tam ay sayılır. Ücretler her yıl yeniden değerleme oranıyla güncellenir."
+  },
+  "defaultNotificationOffsetsDays": [
+    30,
+    7,
+    1
+  ],
+  "overdueReminderRepeatDays": 3,
+  "inspectionChecklist": {
+    "title": "Muayene öncesi kontrol listesi",
+    "showBeforeDueDays": 30,
+    "items": [
+      {
+        "id": "insurance_valid",
+        "label": "Geçerli zorunlu trafik sigortası var mı?",
+        "hint": "Sigortası olmayan araç muayeneye kabul edilmiyor.",
+        "linkId": "insuranceInquiry",
+        "category": "onKosul"
+      },
+      {
+        "id": "exhaust_done",
+        "label": "Egzoz emisyon ölçümü yapıldı mı?",
+        "hint": "Muayeneden ayrı bir işlem; önceden yaptırılması gerekiyor.",
+        "linkId": null,
+        "category": "onKosul",
+        "onlyForFuelTypes": [
+          "benzin",
+          "dizel",
+          "lpg",
+          "hibrit"
+        ]
+      },
+      {
+        "id": "no_traffic_fine",
+        "label": "Plakada trafik cezası borcu var mı?",
+        "hint": "Borç varsa randevu alınamıyor.",
+        "linkId": "trafficFineInquiry",
+        "category": "onKosul"
+      },
+      {
+        "id": "appointment",
+        "label": "Randevu alındı mı?",
+        "hint": "Randevusuz işlem yapılmıyor.",
+        "linkId": "inspectionAppointment",
+        "category": "onKosul"
+      },
+      {
+        "id": "doc_ruhsat",
+        "label": "Ruhsat",
+        "hint": "Araç tescil belgesi.",
+        "linkId": null,
+        "category": "yanindaGotur"
+      },
+      {
+        "id": "doc_kimlik",
+        "label": "Kimlik",
+        "hint": null,
+        "linkId": null,
+        "category": "yanindaGotur"
+      },
+      {
+        "id": "doc_police",
+        "label": "Sigorta poliçesi",
+        "hint": null,
+        "linkId": null,
+        "category": "yanindaGotur"
+      },
+      {
+        "id": "doc_lpg",
+        "label": "LPG montaj / sızdırmazlık belgesi",
+        "hint": "Yalnızca LPG'li araçlar için.",
+        "linkId": null,
+        "category": "yanindaGotur",
+        "onlyForFuelTypes": [
+          "lpg"
+        ]
+      },
+      {
+        "id": "kit_yangin",
+        "label": "Yangın söndürücü",
+        "hint": null,
+        "linkId": null,
+        "category": "aractaBulunsun"
+      },
+      {
+        "id": "kit_ilkyardim",
+        "label": "İlk yardım çantası",
+        "hint": null,
+        "linkId": null,
+        "category": "aractaBulunsun"
+      },
+      {
+        "id": "kit_reflektor",
+        "label": "Reflektör",
+        "hint": null,
+        "linkId": null,
+        "category": "aractaBulunsun"
+      },
+      {
+        "id": "kit_ampul",
+        "label": "Yedek ampul",
+        "hint": null,
+        "linkId": null,
+        "category": "aractaBulunsun"
+      }
+    ]
+  },
+  "checklistCategories": {
+    "onKosul": "Muayeneden önce halledilecekler",
+    "yanindaGotur": "Yanına al",
+    "aractaBulunsun": "Araçta bulunsun"
+  },
+  "sourcesCheckedAt": "2026-08-27",
+  "officialLinksCheckedAt": "2026-08-28"
+}

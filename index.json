@@ -6,6 +6,13 @@
       "schemaVersion": 1,
       "publishedAt": "2026-08-27",
       "inspectionFeeYear": 2026
+    },
+    {
+      "file": "tr_v2.json",
+      "rulesVersion": 2,
+      "schemaVersion": 1,
+      "publishedAt": "2026-09-01",
+      "inspectionFeeYear": 2026
     }
   ]
 }
